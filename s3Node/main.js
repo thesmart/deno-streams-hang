@@ -1,8 +1,8 @@
 import { PutObjectCommand, S3Client } from '@aws-sdk/client-s3';
 import { createReadStream, statSync } from 'node:fs';
 
-const S3_REGION = 'us-west-2';
-const S3_BUCKET = 'dragondrop1701';
+const S3_REGION = process.env.S3_REGION;
+const S3_BUCKET = process.env.S3_BUCKET;
 const client = new S3Client({ region: S3_REGION });
 
 const fileStat = statSync("../test.jpg");
