@@ -3,13 +3,13 @@ Demonstrates how Node and Deno have different behavior.
 
 Run the node version of the app:
 ```
-$ node main.js
+$ S3_REGION=us-west-2 S3_BUCKET=my-bucket node main.js
 done:  1718409332487.jpg
 ```
 
 Run the deno version of the app:
 ```
-$ deno run --allow-all main.ts
+$ S3_REGION=us-west-2 S3_BUCKET=my-bucket deno run --allow-all main.ts
 ```
 
 The latter hangs indefinitely.
