@@ -14,7 +14,7 @@ const cmd = new PutObjectCommand({
   Bucket: S3_BUCKET,
   Key: key,
   CacheControl: 'max-age=315360000, immutable',
-  ContentLength: fileStat.size - 10000,
+  ContentLength: fileStat.size,
   ContentType: 'image/jpeg',
   Body: readStream,
 });
